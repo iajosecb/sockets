@@ -1,0 +1,9 @@
+body {
+    background: #fdfdfd;
+}
+.message-box {
+    width: 100%;
+    height: auto;
+    background: rgb(247, 246, 246);
+    padding: 15px;
+}

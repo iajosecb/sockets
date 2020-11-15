@@ -9,10 +9,10 @@ function render(data) {
     // La funcion map recorre Arrays de una manera mas elegante
     var html = data.map(function(elemt, index){
         return(
-            `<div>
+            `<div class="message-box">
                 <strong>${elemt.username}: </strong>
                 <em>${elemt.text}</em>
-            </div>`);
+            </div> <br/>`);
     }).join(" ");
     
     document.getElementById('messages').innerHTML = html;
