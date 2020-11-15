@@ -4,11 +4,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-var messages = [{
-    id: 1,
-    text: "Hello everyone",
-    username: "Jose Cruz"
-}];
+var messages = [];
 
 // Para ficheros estaticos de la aplicacion
 app.use(express.static('public'));
@@ -20,9 +16,7 @@ app.get('/Ok', function(req, res){
 
 io.on('connection', function(socket){
     console.log('User Connected');
-    // Emite el mensaje que esta estatico en el array messages
-    socket.emit('messages', messages);
-    
+
     // Guardamos el mensaje en el array
     socket.on('newMessage', function(data) {
         messages.push(data);

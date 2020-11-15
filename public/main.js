@@ -10,7 +10,7 @@ function render(data) {
     var html = data.map(function(elemt, index){
         return(
             `<div>
-                <strong>${elemt.username}</strong>
+                <strong>${elemt.username}: </strong>
                 <em>${elemt.text}</em>
             </div>`);
     }).join(" ");
